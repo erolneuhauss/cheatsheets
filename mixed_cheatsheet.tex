@@ -1,9 +1,153 @@
-\documentclass{scrartcl}
+\documentclass[12pt,paper=landscape,paper=a4]{scrartcl}
+\usepackage[left=0.5cm,right=0.5cm,top=0.5cm,bottom=1cm]{geometry}
 \usepackage[utf8]{inputenc}
 \usepackage[english]{babel}
+\usepackage[spacing,kerning,tracking,babel]{microtype}
+\usepackage{textcomp}
+\usepackage[]{Myriad}
+\usepackage[minionint,mathlf]{MinionPro}
+\usepackage{MnSymbol}
+\renewcommand{\familydefault}{\sfdefault}
+\renewcommand{\sfdefault}{Myriad-LF}
+\usepackage{graphicx}
+\usepackage{paralist}
+\usepackage{currvita}
+\usepackage{url}
+\usepackage{marvosym}
+\usepackage{fontawesome}
+\usepackage{multicol}
 \usepackage[dvipsnames]{xcolor}
+
 \begin{document}
+\pagestyle{empty}
 \pagecolor{Dandelion}
 
-Just Hi
+\begin{multicols}{3}
+
+    \begin{tabular}{ll}
+        \multicolumn{2}{c}{Git aliases} \\
+        \hline
+        g    & git\\
+        gbc  & git checkout -b\\
+        gbl  & git branch --verbose\\
+        gbx  & git branch -D\\
+        gcm  & git commit --message\\
+        gco  & git checkout\\
+        gcp  & git cherry-pick --ff\\
+        gfm  & git pull\\
+        gia  & git add\\
+        gix  & git rm -r --cached\\
+        gid  & git diff --cached\\
+        gm   & git merge\\
+        gl   & git log \ldots\\
+        gls  & git log --stat \ldots\\
+        gp   & git push\\
+        gwd  & git diff\\
+        gws  & git status --short\\
+        gRl  & git remote --verbose\\
+        gwx  & git rm -r
+    \end{tabular}
+
+    \vspace{1em}
+
+    \begin{tabular}{ll}
+        \multicolumn{2}{c}{Vim plugin for Git}\\
+        \hline
+        \verb!:!Gdiff          & \\
+        \verb!:!Gw             & git add\\
+        \verb!:!Git log        & \\
+        \verb!:!Git commit     & \\
+        \verb!:!Git push       & \\
+        \verb!:!vertical G     & \\
+        s,u  	        & stage,unstage\\
+        cc		        & create commit\\
+    \end{tabular}
+
+    \vspace{1em}
+
+    \begin{tabular}{ll}
+        \multicolumn{2}{c}{K9s}\\
+        \hline
+        s-l  & sort available\\
+        s-r  & sort ready\\
+        c-z  & toggle faults\\
+        c-w  & toggle wide\\
+    \end{tabular}
+
+    \vspace{1em}
+
+    \begin{tabular}{ll}
+        \multicolumn{2}{c}{misc tools}\\
+        \hline
+        bat /etc/hosts  & cat on wings\\
+        llfu            & exa -abghHliS\\
+        ll              & exa -l\\
+        llt             & exa --tree\\
+        fzf             & f\\
+        f               & fzf \verb!--!preview\\
+        fd app \verb!--!type f -e sh /etc & complex find \\
+        rg 'app: nginx' -tyaml  & ripgrep \\
+        diff-so-fancy           & diff tools\\
+        delta                   & another diff tool\\
+        vim c-t tab tab         & edit two files\\
+        cd \verb!~!/git/\verb!**! & fasd\_cd \\
+        fd yaml\$       & finds yaml files\\
+        v ,hosts        & auto complete\\
+        j ckad          & jump to dir ckad\\
+    \end{tabular}
+
+    \vspace{1em}
+
+    \begin{tabular}{l}
+        \multicolumn{1}{c}{rook ceph}\\
+        \hline
+        ceph status\\
+        ceph osd tree\\
+        ceph osd status\\
+        ceph osd df\\
+        ceph osd utilization\\
+        ceph crash ls\\
+        ceph crash info \textless{}ID\textgreater\\
+        ceph crash archive-all\\
+    \end{tabular}
+
+    \vspace{1em}
+
+    \begin{tabular}{ll}
+        \multicolumn{2}{c}{Vim misc}\\
+        \hline
+        gcc             & comment out\\
+        \verb!:!SSave   & save session\\
+        gf              & go to file\\
+        gd              & go to definition\\
+        c-w,x  	        & switch splits\\
+        10,c-w,<        & resize pane\\
+        ESC c-\ c-n     & exit term \\
+        \verb!:!vs \verb!|! te    & term in v split \\
+        ysiw] \verb!}!)     & put in [], \verb!{! \verb!}!,()\\
+        \verb!,! 		    & \verb!:!WhichKey\\
+        \verb!,!rn          & coc-rename\\
+        2xspace             & clear hlsearch\\
+        \verb!\r!	        & run python code\\
+        \verb!:!Vista coc   & open tagbar\\
+        K               & show doc\\
+        ALEInfo         & show configuration
+        COCInstall      & install coc extensions
+    \end{tabular}
+
+    \vspace{1em}
+
+    \begin{tabular}{ll}
+        \multicolumn{2}{c}{Vim foldings}\\
+        \hline
+        zo/zO  & open \\
+        zc/zC  & close\\
+        zM     & close all\\
+        zR     & open all\\
+        zm     & more\\
+        zr     & less\\
+        zx     & update\\
+    \end{tabular}
+\end{multicols}
+
 \end{document}
