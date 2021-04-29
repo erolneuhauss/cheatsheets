@@ -1,0 +1,13 @@
+---
+version: '3.3'
+services:
+  pdflatex:
+    container_name: cheatsheets
+    image: registry.fritz.box/my/x86_64/latex_minion:2020-basic
+    volumes:
+      - ./:/texcode
+    working_dir: /texcode
+    entrypoint:
+      - make
+      - all
+
