@@ -28,8 +28,8 @@
         \multicolumn{2}{c}{Git aliases} \\
         \hline
         g    & git\\
+        gba  & git branch --verbose\\
         gbc  & git checkout -b\\
-        gbl  & git branch --verbose\\
         gbx  & git branch -D\\
         gcm  & git commit --message\\
         gco  & git checkout\\
@@ -50,17 +50,17 @@
 
     \vspace{1em}
 
-    \begin{tabular}{ll}
-        \multicolumn{2}{c}{Vim plugin for Git}\\
+    \begin{tabular}{l}
+        \multicolumn{1}{c}{rook ceph}\\
         \hline
-        \verb!:!Gdiff          & \\
-        \verb!:!Gw             & git add\\
-        \verb!:!Git log        & \\
-        \verb!:!Git commit     & \\
-        \verb!:!Git push       & \\
-        \verb!:!vertical G     & \\
-        s,u  	        & stage,unstage\\
-        cc		        & create commit\\
+        ceph status\\
+        ceph osd tree\\
+        ceph osd status\\
+        ceph osd df\\
+        ceph osd utilization\\
+        ceph crash ls\\
+        ceph crash info \textless{}ID\textgreater\\
+        ceph crash archive-all\\
     \end{tabular}
 
     \vspace{1em}
@@ -79,36 +79,38 @@
     \begin{tabular}{ll}
         \multicolumn{2}{c}{misc tools}\\
         \hline
-        bat /etc/hosts  & cat on wings\\
-        llfu            & exa -abghHliS\\
-        ll              & exa -l\\
-        llt             & exa --tree\\
-        fzf             & f\\
-        f               & fzf \verb!--!preview\\
+        bat /etc/hosts              & cat on wings\\
+        cd \verb!~!/git/\verb!**!   & fasd\_cd \\
+        mount \verb!|! column -t    & tabbed output \\
+        delta                       & another diff tool\\
+        diff-so-fancy               & diff tools\\
+        f                           & fzf \verb!--!preview\\
         fd app \verb!--!type f -e sh /etc & complex find \\
-        rg 'app: nginx' -tyaml  & ripgrep \\
-        diff-so-fancy           & diff tools\\
-        delta                   & another diff tool\\
-        vim c-t tab tab         & edit two files\\
-        cd \verb!~!/git/\verb!**! & fasd\_cd \\
         fd yaml\$       & finds yaml files\\
-        v ,hosts        & auto complete\\
+        fzf             & f\\
         j ckad          & jump to dir ckad\\
+        ll              & exa -l\\
+        llfu            & exa -abghHliS\\
+        llt             & exa --tree\\
+        open            & gio open\\
+        rg 'app: nginx' -tyaml      & ripgrep \\
+        v ,hosts                    & auto complete\\
+        vim c-t tab tab             & edit two files\\
     \end{tabular}
 
     \vspace{1em}
 
-    \begin{tabular}{l}
-        \multicolumn{1}{c}{rook ceph}\\
+    \begin{tabular}{ll}
+        \multicolumn{2}{c}{Vim plugin for Git}\\
         \hline
-        ceph status\\
-        ceph osd tree\\
-        ceph osd status\\
-        ceph osd df\\
-        ceph osd utilization\\
-        ceph crash ls\\
-        ceph crash info \textless{}ID\textgreater\\
-        ceph crash archive-all\\
+        \verb!:!Gdiff          & \\
+        \verb!:!Gw             & git add\\
+        \verb!:!Git log        & \\
+        \verb!:!Git commit     & \\
+        \verb!:!Git push       & \\
+        \verb!:!vertical G     & \\
+        s,u  	        & stage,unstage\\
+        cc		        & create commit\\
     \end{tabular}
 
     \vspace{1em}
@@ -116,23 +118,29 @@
     \begin{tabular}{ll}
         \multicolumn{2}{c}{Vim misc}\\
         \hline
-        gcc             & comment out\\
-        \verb!:!SSave   & save session\\
-        gf              & go to file\\
-        gd              & go to definition\\
-        c-w,x  	        & switch splits\\
-        10,c-w,<        & resize pane\\
-        ESC c-\ c-n     & exit term \\
-        \verb!:!vs \verb!|! te    & term in v split \\
-        ysiw] \verb!}!)     & put in [], \verb!{! \verb!}!,()\\
         \verb!,! 		    & \verb!:!WhichKey\\
+        \verb!,!1           & \verb!:!bprevious\\
+        \verb!,!2           & \verb!:!bnext\\
+        \verb!,!g           & vertical G\\
+        \verb!,!i           & buffers\\
         \verb!,!rn          & coc-rename\\
-        2xspace             & clear hlsearch\\
+        \verb!,!r           & \verb!:!ranger\\
+        \verb!,!s           & \verb!:!Startify\\
+        gcc                 & comment out\\
+        \verb!:!SSave       & save session\\
+        gf                  & go to file\\
+        gd                  & go to definition\\
+        c-w,x  	            & switch splits\\
+        10,c-w,<            & resize pane\\
+        ysiw] \verb!}!)     & put in [], \verb!{! \verb!}!,()\\
+        2 \verb!x! space    & clear hlsearch\\
         \verb!\r!	        & run python code\\
         \verb!:!Vista coc   & open tagbar\\
-        K               & show doc\\
-        ALEInfo         & show configuration \\
-        COCInstall      & install coc extensions
+        K                   & show doc\\
+        ALEInfo             & show configuration \\
+        CocInstall          & install coc extensions\\
+        ESC c-\textbackslash{}, c-n     & exit term \\
+        \verb!:!vs \verb!|! te          & term in v split
     \end{tabular}
 
     \vspace{1em}
