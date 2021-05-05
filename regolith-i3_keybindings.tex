@@ -1,5 +1,5 @@
-\documentclass[12pt,paper=portrait,paper=a4]{scrartcl}
-\usepackage[left=0.5cm,right=0.5cm,top=0.5cm,bottom=1cm]{geometry}
+\documentclass[12pt,paper=landscape,paper=a4]{scrartcl}
+\usepackage[left=1.5cm,right=1.5cm,top=1.5cm,bottom=1cm]{geometry}
 \usepackage[utf8]{inputenc}
 \usepackage[english]{babel}
 \usepackage[spacing,kerning,tracking,babel]{microtype}
@@ -16,13 +16,17 @@
 \usepackage{marvosym}
 \usepackage{fontawesome}
 \usepackage{multicol}
-\usepackage[dvipsnames]{xcolor}
+\usepackage[x11names]{xcolor}
 
 \begin{document}
 \pagestyle{empty}
-%\pagecolor{Dandelion} % use for screen, not for print
+% https://github.com/morhetz/gruvbox-contrib
+\definecolor{gruvbox_bg}{HTML}{282828}
+\definecolor{gruvbox_fg}{HTML}{EBDBB2}
+\pagecolor{gruvbox_bg} % use for screen, not for print
+\color{gruvbox_fg}
 
-%\begin{multicols}{1}
+\begin{multicols}{2}
 
     \begin{tabular}{ll}
          \multicolumn{2}{c}{Launch} \\
@@ -37,6 +41,7 @@
          This Dialog         & \faWindows{} Shift ?
     \end{tabular}
 
+    \vspace{1em}
 
     \begin{tabular}{ll}
          \multicolumn{2}{c}{Modify}\\
@@ -64,6 +69,7 @@
          Window Position                    & \faWindows{} Shift ↑ ↓ ← →
      \end{tabular}
 
+    \vspace{1em}
 
     \begin{tabular}{ll}
          \multicolumn{2}{c}{Navigate}\\
@@ -80,6 +86,7 @@
          Workspaces 1-10    & \faWindows{} 0..9
     \end{tabular}
 
+    \vspace{1em}
 
     \begin{tabular}{ll}
          \multicolumn{2}{c}{Session}\\
@@ -96,6 +103,6 @@
          Terminate App      & \faWindows{} Alt q
     \end{tabular}
 
-%\end{multicols}
+\end{multicols}
 
 \end{document}

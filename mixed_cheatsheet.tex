@@ -16,11 +16,15 @@
 \usepackage{marvosym}
 \usepackage{fontawesome}
 \usepackage{multicol}
-\usepackage[dvipsnames]{xcolor}
+\usepackage[x11names]{xcolor}
 
 \begin{document}
 \pagestyle{empty}
-%\pagecolor{Dandelion} % use for screen, not for print
+% https://github.com/morhetz/gruvbox-contrib
+\definecolor{gruvbox_bg}{HTML}{282828}
+\definecolor{gruvbox_fg}{HTML}{EBDBB2}
+\pagecolor{gruvbox_bg} % use for screen, not for print
+\color{gruvbox_fg}
 
 \begin{multicols}{3}
 
